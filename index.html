@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html><!-- Mirrored from developer.pebble.com/sdk/install/linux/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Jun 2018 03:24:10 GMT --><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Installing the Pebble SDK on Linux // Pebble Developers</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Detailed installation instructions for the Pebble SDK on Linux.">
+  <link rel="canonical" href="https://developer.rebble.io/developer.getpebble.com/sdk/install/linux/index.html">
+  <link href="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/css3b49.css" rel="stylesheet" type="text/css">
+  <link href="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/css6fd4.css" rel="stylesheet" type="text/css">
+  <link href="https://developer.rebble.io/developer.pebble.com/assets/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon" id="favicon">
+  <link rel="stylesheet" type="text/css" href="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/main.css">
+  
+  <noscript>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/noscript.css">
+  </noscript>
+  
+  <script async="" src="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/analytics.js"></script><script src="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/rollbar.js" async=""></script><script async="" src="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/analytics_002.js"></script><script type="text/javascript">
+    var _rollbarConfig = {
+      accessToken: 'e1ecd52de5ba46c88e9f6f346a954c62',
+      captureUncaught: true,
+      payload: {
+        environment: 'production'
+      }
+    };
+    !function(a,b){function c(b){this.shimId=++h,this.notifier=null,this.parentShim=b,this.logger=function(){},a.console&&void 0===a.console.shimId&&(this.logger=a.console.log)}function d(b,c,d){a._rollbarWrappedError&&(d[4]||(d[4]=a._rollbarWrappedError),d[5]||(d[5]=a._rollbarWrappedError._rollbarContext),a._rollbarWrappedError=null),b.uncaughtError.apply(b,d),c&&c.apply(a,d)}function e(b){var d=c;return g(function(){if(this.notifier)return this.notifier[b].apply(this.notifier,arguments);var c=this,e="scope"===b;e&&(c=new d(this));var f=Array.prototype.slice.call(arguments,0),g={shim:c,method:b,args:f,ts:new Date};return a._rollbarShimQueue.push(g),e?c:void 0})}function f(a,b){if(b.hasOwnProperty&&b.hasOwnProperty("addEventListener")){var c=b.addEventListener;b.addEventListener=function(b,d,e){c.call(this,b,a.wrap(d),e)};var d=b.removeEventListener;b.removeEventListener=function(a,b,c){d.call(this,a,b&&b._wrapped?b._wrapped:b,c)}}}function g(a,b){return b=b||this.logger,function(){try{return a.apply(this,arguments)}catch(c){b("Rollbar internal error:",c)}}}var h=0;c.init=function(a,b){var e=b.globalAlias||"Rollbar";if("object"==typeof a[e])return a[e];a._rollbarShimQueue=[],a._rollbarWrappedError=null,b=b||{};var h=new c;return g(function(){if(h.configure(b),b.captureUncaught){var c=a.onerror;a.onerror=function(){var a=Array.prototype.slice.call(arguments,0);d(h,c,a)};var g,i,j="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(g=0;g<j.length;++g)i=j[g],a[i]&&a[i].prototype&&f(h,a[i].prototype)}return a[e]=h,h},h.logger)()},c.prototype.loadFull=function(a,b,c,d,e){var f=g(function(){var a=b.createElement("script"),e=b.getElementsByTagName("script")[0];a.src=d.rollbarJsUrl,a.async=!c,a.onload=h,e.parentNode.insertBefore(a,e)},this.logger),h=g(function(){var b;if(void 0===a._rollbarPayloadQueue){var c,d,f,g;for(b=new Error("rollbar.js did not load");c=a._rollbarShimQueue.shift();)for(f=c.args,g=0;g<f.length;++g)if(d=f[g],"function"==typeof d){d(b);break}}"function"==typeof e&&e(b)},this.logger);g(function(){c?f():a.addEventListener?a.addEventListener("load",f,!1):a.attachEvent("onload",f)},this.logger)()},c.prototype.wrap=function(b,c){try{var d;if(d="function"==typeof c?c:function(){return c||{}},"function"!=typeof b)return b;if(b._isWrap)return b;if(!b._wrapped){b._wrapped=function(){try{return b.apply(this,arguments)}catch(c){throw c._rollbarContext=d(),c._rollbarContext._wrappedSource=b.toString(),a._rollbarWrappedError=c,c}},b._wrapped._isWrap=!0;for(var e in b)b.hasOwnProperty(e)&&(b._wrapped[e]=b[e])}return b._wrapped}catch(f){return b}};for(var i="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError".split(","),j=0;j<i.length;++j)c.prototype[i[j]]=e(i[j]);var k="../../../../cdnjs.cloudflare.com/ajax/libs/rollbar.js/1.1.0/rollbar.min.js";_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||k;var l=c.init(a,_rollbarConfig);l.loadFull(a,b,!1,_rollbarConfig)}(window,document);
+  </script>
+  <script type="text/javascript" async="">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-30638158-4', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+<style id="pretty-embed-style">.pretty-embed{position:relative;cursor:pointer;display:block}.pretty-embed img{width:100%;height:auto}.pretty-embed iframe{border:0 solid transparent}.pretty-embed:after{display:block;content:"";position:absolute;top:50%;margin-top:-19px;left:50%;margin-left:-27px;width:54px;height:38px;background-image:url(data:image/png;base64,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);-webkit-background-size:cover;background-size:cover}.pretty-embed.play:after{display:none}.pretty-embed:hover:after{background-image:url(data:image/png;base64,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)}</style></head>
+<body class=""><div class="grid-state-indicator"></div><div class="js-mobile-nav mm-menu mm-horizontal mm-offcanvas mm-hasfooter"><div class="mm-footer"><a href="https://www.pebble.com/legal/privacy/" target="_blank">Privacy Policy</a> · <a href="https://www.pebble.com/legal/cookies/" target="_blank">Cookie Policy</a></div><ul class="mm-list mm-panel mm-opened mm-current" id="mm-0">
+    <li class="mobile-nav--home"><a href="https://developer.rebble.io/developer.pebble.com/index.html">Home</a></li>
+    <li class="mobile-nav--tutorials"><a class="mm-subopen" href="#mm-1"></a><a href="https://developer.rebble.io/developer.pebble.com/tutorials/index.html">Tutorials</a>
+      
+    </li>
+    <li class="mobile-nav--sdk"><a href="https://developer.rebble.io/developer.pebble.com/sdk/index.html">Get the SDK</a></li>
+    <li class="mobile-nav--guides"><a class="mm-subopen" href="#mm-9"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/index.html">Guides</a>
+      <!-- layouts/guides/master -->
+      
+    </li>
+    <li class="mobile-nav--docs"><a class="mm-subopen" href="#mm-24"></a><a href="https://developer.rebble.io/developer.pebble.com/docs/index.html">Documentation</a>
+      
+    </li>
+    <li class="mobile-nav--examples"><a href="https://developer.rebble.io/developer.pebble.com/examples/index.html">Examples</a></li>
+    <li class="mobile-nav--community"><a class="mm-subopen" href="#mm-30"></a><a href="https://developer.rebble.io/developer.pebble.com/community/index.html">Community</a>
+      <!-- layouts/community -->
+      
+    </li>
+    <li class="mobile-nav--blog"><a href="https://developer.rebble.io/developer.pebble.com/blog/index.html">Blog</a></li>
+    <li class="mobile-nav--more"><a class="mm-subopen" href="#mm-35"></a><a href="https://developer.rebble.io/developer.pebble.com/more/index.html">More</a>
+      <!-- layouts/more -->
+      
+    </li>
+  </ul><ul class="mm-list mm-panel mm-hidden" id="mm-1"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Tutorials</a></li>
+        <li><a class="mm-subopen" href="#mm-2"></a><a href="https://developer.rebble.io/developer.pebble.com/tutorials/beginner/index.html">Learn C Basics</a>
+          
+        </li>
+        <li><a class="mm-subopen" href="#mm-3"></a><a href="https://developer.rebble.io/developer.pebble.com/tutorials/watchface-tutorial/part1/index.html">Create a C Watchface</a>
+          
+        </li>
+        <li><a class="mm-subopen" href="#mm-4"></a><a href="https://developer.rebble.io/developer.pebble.com/tutorials/pebble-js-tutorial/part1/index.html">Create a JS Watchapp</a>
+          
+        </li>
+        <li><a class="mm-subopen" href="#mm-5"></a><a href="https://developer.rebble.io/developer.pebble.com/tutorials/intermediate/index.html">Add More Features</a>
+          
+        </li>
+        <li><a class="mm-subopen" href="#mm-6"></a><a href="https://developer.rebble.io/developer.pebble.com/tutorials/advanced/index.html">Go Beyond</a>
+          
+        </li>
+        <li><a class="mm-subopen" href="#mm-7"></a><a href="https://developer.rebble.io/developer.pebble.com/tutorials/android-tutorial/index.html">PebbleKit Android Tutorial</a>
+          
+        </li><li><a class="mm-subopen" href="#mm-8"></a><a href="https://developer.rebble.io/developer.pebble.com/tutorials/ios-tutorial">PebbleKit iOS Tutorial</a>
+          
+        </li>
+      </ul><ul class="mm-list mm-panel mm-hidden" id="mm-2"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-1">Learn C Basics</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/beginner/primer/index.html">Learning C for the Pebble SDK</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/beginner/simple-c-program/index.html">A Simple C Program</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/beginner/hello-pebble/index.html">Hello, Pebble!</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/beginner/more-c/index.html">More C Concepts</a></li>
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-3"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-1">Create a C Watchface</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/watchface-tutorial/part1/index.html">Build Your Own Watchface</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/watchface-tutorial/part2/index.html">Customize Your Watchface</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/watchface-tutorial/part3/index.html">Adding Content From The Web</a></li>
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-4"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-1">Create a JS Watchapp</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/pebble-js-tutorial/part1/index.html">Build A Watchapp with Pebble.js</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/pebble-js-tutorial/part2/index.html">Expanded Weather Forecasts</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/pebble-js-tutorial/part3/index.html">Adding More Details</a></li>
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-5"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-1">Add More Features</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/intermediate/add-date/index.html">Add a Date View</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/intermediate/add-date/index.html">Add a Battery Meter</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/intermediate/add-date/index.html">Add Connection Alerts</a></li>
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-6"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-1">Go Beyond</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/advanced/vector-animations/index.html">Vector Animations</a></li>
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-7"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-1">PebbleKit Android Tutorial</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/android-tutorial/part1/index.html">Integrating with Android</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/android-tutorial/part2/index.html">Controlling Apps From Pebble</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/android-tutorial/part3/index.html">Rock, Paper, Scissors with Pebble</a></li>
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-8"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-1">PebbleKit iOS Tutorial</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/ios-tutorial/part1/index.html">Integrating with iOS</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/ios-tutorial/part2/index.html">Controlling Apps From Pebble</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/tutorials/ios-tutorial/part3/index.html">Rock, Paper, Scissors with Pebble</a></li>
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-9"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Guides</a></li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-10"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/index.html">App Resources</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-11"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/appstore-publishing/index.html">Appstore Publishing</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-12"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/best-practices/index.html">Best Practices</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-13"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/communication/index.html">Communication</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-14"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/debugging/index.html">Debugging</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-15"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/design-and-interaction/index.html">Design and Interaction</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-16"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/index.html">Events and Services</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-17"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/graphics-and-animations/index.html">Graphics and Animations</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-18"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/migration/index.html">Migrating Older Apps</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-19"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/pebble-packages/index.html">Pebble Packages</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-20"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/index.html">Pebble Timeline</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-21"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/smartstraps/index.html">Smartstraps</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-22"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/tools-and-resources/index.html">Tools and Resources</a>
+            
+          </li>
+        
+          
+          
+          <li data-page="/mobilenav.html">
+            <a class="mm-subopen" href="#mm-23"></a><a href="https://developer.rebble.io/developer.pebble.com/guides/user-interfaces/index.html">User Interfaces</a>
+            
+          </li>
+        
+      </ul><ul class="mm-list mm-panel mm-hidden" id="mm-10"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">App Resources</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/animated-images/index.html">Animated Images</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/app-assets/index.html">App Assets</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/converting-svg-to-pdc/index.html">Converting SVG to PDC</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/fonts/index.html">Fonts</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/images/index.html">Images</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/pdc-format/index.html">Pebble Draw Command File Format</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/platform-specific/index.html">Platform-specific Resources</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/raw-data-files/index.html">Raw Data Files</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/app-resources/system-fonts/index.html">System Fonts</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-11"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Appstore Publishing</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/appstore-publishing/appstore-analytics/index.html">Appstore Analytics</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/appstore-publishing/appstore-assets/index.html">Appstore Assets</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/appstore-publishing/preparing-a-submission/index.html">Preparing a Submission</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/appstore-publishing/publishing-an-app/index.html">Publishing an App</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/appstore-publishing/whitelisting/index.html">iOS App Whitelisting</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-12"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Best Practices</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/best-practices/building-for-every-pebble/index.html">Building for Every Pebble</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/best-practices/conserving-battery-life/index.html">Conserving Battery Life</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/best-practices/modular-app-architecture/index.html">Modular App Architecture</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-13"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Communication</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/communication/advanced-communication/index.html">Advanced Communication</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/communication/datalogging/index.html">Datalogging</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/communication/sending-and-receiving-data/index.html">Sending and Receiving Data</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/communication/using-pebblekit-android/index.html">PebbleKit Android</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/communication/using-pebblekit-ios/index.html">PebbleKit iOS</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/communication/using-pebblekit-js/index.html">PebbleKit JS</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/communication/using-the-sports-api/index.html">Sports API</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-14"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Debugging</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/debugging/common-runtime-errors/index.html">Common Runtime Errors</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/debugging/common-syntax-errors/index.html">Common Syntax Errors</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/debugging/debugging-with-app-logs/index.html">Debugging with App Logs</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/debugging/debugging-with-gdb/index.html">Debugging with GDB</a>
+                  </li>
+                
+              
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-15"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Design and Interaction</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/design-and-interaction/benefits/index.html">Benefits of Design Guidelines</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/design-and-interaction/core-experience/index.html">Core Experience Design</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/design-and-interaction/implementation/index.html">Example Implementations</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/design-and-interaction/in-the-round/index.html">Round App Design</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/design-and-interaction/one-click-actions/index.html">One Click Actions</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/design-and-interaction/recommended/index.html">Recommended Guidelines and Patterns</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-16"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Events and Services</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/accelerometer/index.html">Accelerometer</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/background-worker/index.html">Background Worker</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/buttons/index.html">Buttons</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/compass/index.html">Compass</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/dictation/index.html">Dictation</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/events/index.html">Event Services</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/health/index.html">Pebble Health</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/persistent-storage/index.html">Persistent Storage</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/events-and-services/wakeups/index.html">Wakeups</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-17"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Graphics and Animations</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/graphics-and-animations/animations/index.html">Animations</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/graphics-and-animations/drawing-primitives-images-and-text/index.html">Drawing Primitives, Images and Text</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/graphics-and-animations/framebuffer-graphics/index.html">Framebuffer Graphics</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/graphics-and-animations/vector-graphics/index.html">Vector Graphics</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-18"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Migrating Older Apps</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/migration/3x-aplite-migration/index.html">SDK 3.x on Aplite Migration Guide</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/migration/migration-guide-3/index.html">SDK 3.x Migration Guide</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/migration/migration-guide-4/index.html">SDK 4.x Migration Guide</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/migration/migration-guide/index.html">SDK 2.x Migration Guide</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/migration/pebblekit-ios-3/index.html">PebbleKit iOS 3.0 Migration Guide</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-19"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Pebble Packages</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/pebble-packages/creating-packages/index.html">Creating Pebble Packages</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/pebble-packages/using-packages/index.html">Using Pebble Packages</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-20"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Pebble Timeline</a></li>
+              
+              
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/pin-structure/index.html">Creating Pins</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/timeline-architecture/index.html">Service Architecture</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/timeline-js/index.html">Managing Subscriptions</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/timeline-libraries/index.html">Libraries for Pushing Pins</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/timeline-public/index.html">Public Web API</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-21"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Smartstraps</a></li>
+              
+              
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/smartstraps/smartstrap-hardware/index.html">Hardware Specification</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/smartstraps/smartstrap-protocol/index.html">Protocol Specification</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/smartstraps/talking-to-pebble/index.html">Talking To Pebble</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/smartstraps/talking-to-smartstraps/index.html">Talking To Smartstraps</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-22"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">Tools and Resources</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/tools-and-resources/app-metadata/index.html">App Metadata</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/tools-and-resources/cloudpebble/index.html">CloudPebble</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/tools-and-resources/color-picker/index.html">Color Picker Tool</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/tools-and-resources/developer-connection/index.html">Developer Connection</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/tools-and-resources/hardware-information/index.html">Hardware Information</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/tools-and-resources/internationalization/index.html">Internationalization</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/tools-and-resources/pebble-tool/index.html">Command Line Tool</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-23"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-9">User Interfaces</a></li>
+              
+              
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/user-interfaces/app-configuration/index.html">App Configuration</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/user-interfaces/app-exit-reason/index.html">App Exit Reason</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/user-interfaces/appglance-c/index.html">AppGlance C API</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/user-interfaces/appglance-pebblekit-js/index.html">AppGlance in PebbleKit JS</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/user-interfaces/appglance-rest/index.html">AppGlance REST API</a>
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/user-interfaces/layers/index.html">Layers</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/user-interfaces/round-app-ui/index.html">Round App UI</a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="https://developer.rebble.io/developer.pebble.com/guides/user-interfaces/unobstructed-area/index.html">Unobstructed Area</a>
+                  </li>
+                
+              
+            </ul><ul class="mm-list mm-panel mm-hidden" id="mm-24"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Documentation</a></li>
+        <li class=""><a class="mm-subopen" href="#mm-25"></a><a href="https://developer.rebble.io/developer.pebble.com/docs/c/index.html">Pebble C</a>
+          
+
+        </li>
+        
+        <li class=""><a class="mm-subopen" href="#mm-26"></a><a href="https://developer.rebble.io/developer.pebble.com/docs/rockyjs/index.html">Pebble JavaScript API (beta)</a>
+          
+
+        </li>
+        <li class=""><a class="mm-subopen" href="#mm-27"></a><a href="https://developer.rebble.io/developer.pebble.com/docs/pebblekit-js/index.html">PebbleKit JavaScript</a>
+          
+
+        </li>
+        <li class=""><a class="mm-subopen" href="#mm-28"></a><a href="https://developer.rebble.io/developer.pebble.com/docs/pebblekit-ios/index.html">PebbleKit iOS</a>
+          
+
+        </li>
+        <li class=""><a class="mm-subopen" href="#mm-29"></a><a href="https://developer.rebble.io/developer.pebble.com/docs/pebblekit-android/index.html">PebbleKit Android</a>
+          
+
+        </li>
+      </ul><ul class="mm-list mm-panel mm-hidden" id="mm-25"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-24">Pebble C</a></li>
+
+</ul><ul class="mm-list mm-panel mm-hidden" id="mm-26"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-24">Pebble JavaScript API (beta)</a></li>
+
+</ul><ul class="mm-list mm-panel mm-hidden" id="mm-27"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-24">PebbleKit JavaScript</a></li>
+
+</ul><ul class="mm-list mm-panel mm-hidden" id="mm-28"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-24">PebbleKit iOS</a></li>
+
+</ul><ul class="mm-list mm-panel mm-hidden" id="mm-29"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-24">PebbleKit Android</a></li>
+
+</ul><ul class="mm-list mm-panel mm-hidden" id="mm-30"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Community</a></li>
+        <li>
+          <a class="mm-subopen" href="#mm-31"></a><a href="https://developer.rebble.io/developer.pebble.com/community/events/index.html">Events</a>
+          
+        </li>
+        <li><a href="https://developer.rebble.io/developer.pebble.com/community/online/index.html">Online Communities</a></li>
+        <li>
+          <a class="mm-subopen" href="#mm-32"></a><a href="https://developer.rebble.io/developer.pebble.com/community/apps/index.html">Example Apps</a>
+          
+        </li>
+        <li>
+          <a class="mm-subopen" href="#mm-33"></a><a href="https://developer.rebble.io/developer.pebble.com/community/tools/index.html">Tools</a>
+          
+        </li>
+        <li>
+          <a class="mm-subopen" href="#mm-34"></a><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/index.html">Libraries</a>
+          
+        </li>
+      </ul><ul class="mm-list mm-panel mm-hidden" id="mm-31"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-30">Events</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/community/events/developer-retreat-2014">Developer Retreat 2014</a></li>
+            <li><a href="https://developer.rebble.io/developer.pebble.com/community/events/developer-retreat-2015">Developer Retreat 2015</a></li>
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-32"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-30">Example Apps</a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/apps/Hello/index.html"><span>Hello</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/apps/caltrain/index.html"><span>Caltrain</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/apps/heroboard/index.html"><span>HeroBoard</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/apps/multi-timer/index.html"><span>Multi Timer</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/apps/resistor-time/index.html"><span>Resistor Time</span></a></li>
+            
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-33"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-30">Tools</a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/tools/appmsgbridge/index.html"><span>App Message Bridge</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/tools/badge-generator/index.html"><span>Appstore Badge Generator</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/tools/gpath-svg/index.html"><span>GPath.svg</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/tools/pbuild/index.html"><span>pBuild Travis CI Build Tool</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/tools/sublime-text-package/index.html"><span>Sublime Text Plugin</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/tools/watchface-generator/index.html"><span>Watchface Generator</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/tools/watchstatus/index.html"><span>Watch Status</span></a></li>
+            
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-34"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-30">Libraries</a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/color-select-lib/index.html"><span>Color Selector</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/custom-status-bar-for-pebble/index.html"><span>Custom Status Bar for Pebble</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/effect-layer/index.html"><span>EffectLayer</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/gbitmap-colour-palette-manipulator/index.html"><span>GBitmap Colour Palette Manipulator</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/java-pebble-timeline/index.html"><span>Java Pebble Timeline</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/js-message-queue/index.html"><span>JS Message Queue</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/pebble-api-dotnet/index.html"><span>Pebble Timeline API for DotNet (C#)</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/pebble-api-php/index.html"><span>Pebble API PHP</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/pebble-timeline-api-ruby/index.html"><span>PebbleTimeline API Ruby</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/php-pebble-timeline/index.html"><span>PHPebbleTimeline</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/php-timeline-pinpusher/index.html"><span>PinPusher</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/pypebbleapi/index.html"><span>pypebbleapi</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/simple-dithering-library/index.html"><span>Simple Dithering Library</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/t3-keyboard/index.html"><span>T3 Keyboard</span></a></li>
+            
+              <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/community/libraries/toastlayer/index.html"><span>ToastLayer Library</span></a></li>
+            
+          </ul><ul class="mm-list mm-panel mm-hidden" id="mm-35"><li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">More</a></li>
+        <li><a href="https://github.com/pebble-examples" target="_blank">Examples</a></li>
+        <li><a href="https://developer.rebble.io/developer.pebble.com/inspiration">App Inspiration</a></li>
+        <li><a href="https://developer.rebble.io/developer.pebble.com/contact/index.html">Contact</a></li>
+        <li><a href="https://developer.rebble.io/developer.pebble.com/build/index.html">Build Tools</a></li>
+      </ul></div><div class="mm-page mm-slideout"><div class="grid-state-indicator"></div><div class="mmenu__wrapper">
+    <div class="sidebar__wrapper sidebar__wrapper--sectionmenu">
+  <div class="sidebar sidebar--narrow">
+    <a href="https://developer.rebble.io/developer.pebble.com/index.html" class="sidebar__header">
+      <span>pebble</span>
+    </a>
+    <ul class="mainmenu">
+      <li class="mainmenu__item mainmenu__item--getting-started"><a href="https://developer.rebble.io/developer.pebble.com/tutorials/index.html"><span>Tutorials</span></a></li>
+<li class="mainmenu__item mainmenu__item--sdk active"><a href="https://developer.rebble.io/developer.pebble.com/sdk/index.html"><span>Get the SDK</span></a></li>
+<li class="mainmenu__item mainmenu__item--guides"><a href="https://developer.rebble.io/developer.pebble.com/guides/index.html"><span>Guides</span></a></li>
+<li class="mainmenu__item mainmenu__item--docs"><a href="https://developer.rebble.io/developer.pebble.com/docs/index.html"><span>Documentation</span></a></li>
+<li class="mainmenu__item mainmenu__item--examples"><a href="https://developer.rebble.io/developer.pebble.com/examples/index.html"><span>Examples</span></a></li>
+<li class="mainmenu__item mainmenu__item--community"><a href="https://developer.rebble.io/developer.pebble.com/community/index.html"><span>Community</span></a></li>
+<li class="mainmenu__item mainmenu__item--blog"><a href="https://developer.rebble.io/developer.pebble.com/blog/index.html"><span>Blog</span></a></li>
+<li class="mainmenu__item mainmenu__item--more"><a href="https://developer.rebble.io/developer.pebble.com/more/index.html"><span>More</span></a></li>
+
+    </ul>
+    <div class="sidebar__legal">
+      <a href="https://www.pebble.com/legal/privacy/" target="_blank">Privacy</a>
+      <br>
+      <a href="https://www.pebble.com/legal/cookies/" target="_blank">Cookies</a>
+    </div>
+    <a href="https://dev-portal.getpebble.com/" target="_blank" class="sidebar__footer">Publish</a>
+  </div>
+  <div class="section-menu section-menu--sdk section-menu--dark">
+    <div class="section-menu__header">
+      <h3><a href="https://developer.rebble.io/developer.pebble.com/sdk/index.html">SDK</a></h3>
+    </div>
+    <ul>
+      <li class="section-menu__item"><a href="https://developer.rebble.io/developer.pebble.com/sdk/download/index.html">Download</a></li>
+      <li class="section-menu__item open">
+        <a href="https://developer.rebble.io/developer.pebble.com/sdk/install/index.html">Installation</a>
+        <ul>
+          <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/install/mac/index.html"><span>Mac OS X</span></a></li>
+          <li class="section-menu__subitem active"><a href="https://developer.rebble.io/developer.pebble.com/sdk/install/linux/index.html"><span>Linux</span></a></li>
+          <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/install/windows/index.html"><span>Windows</span></a></li>
+        </ul>
+      </li>
+      <li class="section-menu__item">
+        <a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.3/index.html">Changelog</a>
+        <ul>
+          
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.3/index.html"><span>4.3</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.2.2/index.html"><span>4.2.2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.2.1/index.html"><span>4.2.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.2/index.html"><span>4.2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.2-beta5/index.html"><span>4.2-beta5</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.2-beta4/index.html"><span>4.2-beta4</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.1.4/index.html"><span>4.1.4</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.1.2/index.html"><span>4.1.2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.1.1/index.html"><span>4.1.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.1/index.html"><span>4.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.0.1/index.html"><span>4.0.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.0/index.html"><span>4.0</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.0-rc20/index.html"><span>4.0-rc20</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.0-beta17/index.html"><span>4.0-beta17</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.0-dp3/index.html"><span>4.0-dp3</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.14/index.html"><span>3.14</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.0-dp2/index.html"><span>4.0-dp2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/4.0-dp1/index.html"><span>4.0-dp1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.13.1/index.html"><span>3.13.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.13/index.html"><span>3.13</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.12/index.html"><span>3.12</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.11.1/index.html"><span>3.11.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.11/index.html"><span>3.11</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.10.1/index.html"><span>3.10.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.10/index.html"><span>3.10</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.10-beta6/index.html"><span>3.10-beta6</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.10-beta2/index.html"><span>3.10-beta2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.10-beta1/index.html"><span>3.10-beta1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.9.2/index.html"><span>3.9.2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.9.1/index.html"><span>3.9.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.9/index.html"><span>3.9</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.9-beta8/index.html"><span>3.9-beta8</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.9-beta7/index.html"><span>3.9-beta7</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.9-beta5/index.html"><span>3.9-beta5</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.8.2/index.html"><span>3.8.2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.8.1/index.html"><span>3.8.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.8/index.html"><span>3.8</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.8-beta12/index.html"><span>3.8-beta12</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.8-beta10/index.html"><span>3.8-beta10</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.8-beta8/index.html"><span>3.8-beta8</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.7/index.html"><span>3.7</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.6.2/index.html"><span>3.6.2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.6/index.html"><span>3.6</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.6-dp8/index.html"><span>3.6-dp8</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.6-dp7/index.html"><span>3.6-dp7</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.6-dp6/index.html"><span>3.6-dp6</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.6-dp5/index.html"><span>3.6-dp5</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.6-dp2/index.html"><span>3.6-dp2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.4/index.html"><span>3.4</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.3/index.html"><span>3.3</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.2.1/index.html"><span>3.2.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.2/index.html"><span>3.2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.1/index.html"><span>3.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0/index.html"><span>3.0</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-beta12/index.html"><span>3.0-beta12</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-beta11/index.html"><span>3.0-beta11</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-beta10/index.html"><span>3.0-beta10</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-dp9/index.html"><span>3.0-dp9</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-dp8/index.html"><span>3.0-dp8</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-dp7/index.html"><span>3.0-dp7</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-dp6/index.html"><span>3.0-dp6</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-dp5/index.html"><span>3.0-dp5</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-dp4/index.html"><span>3.0-dp4</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-dp3/index.html"><span>3.0-dp3</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-dp2/index.html"><span>3.0-dp2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/3.0-dp1/index.html"><span>3.0-dp1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.9/index.html"><span>2.9</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.8.1/index.html"><span>2.8.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.8/index.html"><span>2.8</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.7/index.html"><span>2.7</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.6.1/index.html"><span>2.6.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.6/index.html"><span>2.6</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.5/index.html"><span>2.5</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.4.1/index.html"><span>2.4.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.4/index.html"><span>2.4</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.3/index.html"><span>2.3</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.2/index.html"><span>2.2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.1.1/index.html"><span>2.1.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.1/index.html"><span>2.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0.2/index.html"><span>2.0.2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0.1/index.html"><span>2.0.1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0.0/index.html"><span>2.0.0</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-BETA7/index.html"><span>2.0-BETA7</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-BETA6/index.html"><span>2.0-BETA6</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-BETA5/index.html"><span>2.0-BETA5</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-BETA4/index.html"><span>2.0-BETA4</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-BETA3/index.html"><span>2.0-BETA3</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-BETA2/index.html"><span>2.0-BETA2</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-BETA1/index.html"><span>2.0-BETA1</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-BETA0/index.html"><span>2.0-BETA0</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-DP3/index.html"><span>2.0-DP3</span></a></li>
+          
+            <li class="section-menu__subitem"><a href="https://developer.rebble.io/developer.pebble.com/sdk/changelogs/2.0-DP2/index.html"><span>2.0-DP2</span></a></li>
+          
+        </ul>
+      </li>
+      <li class="section-menu__item"><a href="https://developer.rebble.io/developer.pebble.com/sdk/round-getting-started/index.html">Getting Started with Pebble Time Round</a></li>
+    </ul>
+  </div>
+</div><!-- sidebar__wrapper -->
+<div class="content content--section-menu">
+  <div class="search">
+  <a href="javascript:void(0);" class="mobile-nav__hamburger js-mobile-nav-toggle"><i class="fa fa-reorder"></i></a>
+  <i class="fa fa-lg fa-search search__icon"></i><input type="search" id="quicksearch" placeholder="Search Developer Site">
+</div>
+<div class="quicksearch" style="display: none;" id="quicksearch__results"></div>
+<div id="search__blackout" style="display: none;"></div>
+
+  
+<div class="visible-m visible-s visible-xs row">
+  <div class="col-xs-12">
+    <div class="form__group">
+      <div class="select-style no-label">
+        <select class="js-toc-select">
+          
+            <option value="download-and-install-the-pebble-sdk" selected="selected">Download and install the Pebble SDK</option>
+          
+            <option value="install-pebble-emulator-dependencies">Install Pebble emulator dependencies</option>
+          
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-l-8">
+      <h1 class="pagetitle">Installing the Pebble SDK on Linux</h1>
+      <div class="markdown markdown--staff">
+	      
+        <blockquote>
+<p><strong>Important</strong>: The Pebble SDK is officially supported on
+Ubuntu GNU/Linux 12.04 LTS, Ubuntu 13.04, Ubuntu 13.10 and Ubuntu 14.04 LTS.</p>
+<p>The SDK should also work on other distributions with minor adjustments.</p>
+<p>This webpage has been updated with instructions that work on Ubuntu 20.10</p>
+<p><strong>Python version</strong>: the Pebble SDK requires Python 2.7. At this time, the
+Pebble SDK is not compatible with Python 3. However, some newer
+distributions come with both Python 2.7 and Python 3 installed, which can
+cause problems. You can use <br><code>python --version</code> to determine which is being
+used. This means you may need to run <code>pip2</code> instead of <code>pip</code> when prompted to
+do so below.</p>
+<p>Since Ubuntu 18.04, Python 2 is no longer a default Python version. It can be easily installed with the command:</p>
+<div class="highlight"><pre>sudo apt-get install python2.7
+</pre><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a><a href="javascript:void(0)" class="code-copy-link zeroclipboard-is-hover"><i class="fa fa-clipboard fa-fw"></i></a><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a></div>
+</blockquote>
+<h2 id="download-and-install-the-pebble-sdk" class="anchor">Download and install the Pebble SDK</h2>
+<ol>
+<li><p>If you have not already, download the latest version of the SDK - 
+<a href="https://developer.rebble.io/s3.amazonaws.com/assets.getpebble.com/pebble-tool/pebble-sdk-4.5-linux32.tar.bz2" title="" class="">Linux 32-bit</a> |
+<a href="https://developer.rebble.io/s3.amazonaws.com/assets.getpebble.com/pebble-tool/pebble-sdk-4.5-linux64.tar.bz2" title="" class="">Linux 64-bit</a>.</p></li>
+<li><p>Open a terminal window and
+create a directory to host all Pebble tools:</p><div class="highlight"><pre>mkdir ~/pebble-dev/
+</pre><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a></div></li>
+<li><p>Change into that directory and extract the Pebble SDK that you just
+downloaded, for example:</p><div class="highlight"><pre><span class="nb">cd</span> ~/pebble-dev/
+tar -jxf ~/Downloads/pebble-sdk-4.5-linux64.tar.bz2
+</pre><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a></div>
+<blockquote>
+<p>Note: If you are using 32-bit Linux, the path shown above will be 
+different as appropriate.</p></blockquote>
+<p>You should now have the directory
+<code>~/pebble-dev/pebble-sdk-4.5-linux64</code> with the SDK files and directories inside it.</p></li>
+<li><p>Add the <code>pebble</code> tool to your path and reload your shell configuration:</p><div class="highlight"><pre><span class="nb">echo</span> <span class="s1">'export PATH=~/pebble-dev/pebble-sdk-4.5-linux64/bin:$PATH'</span> &gt;&gt; ~/.bash_profile
+. ~/.bash_profile
+</pre><a href="javascript:void(0)" class="code-copy-link zeroclipboard-is-hover"><i class="fa fa-clipboard fa-fw"></i></a><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a></div></li>
+</ol>
+<p>You can now continue on and install the rest of the dependencies.</p><h3 id="download-and-install-python-libraries" class="anchor">Download and install Python libraries</h3><p>The Pebble SDK depends on Python libraries to convert fonts and images from your
+computer into Pebble resources.</p>
+<ol>
+<li><p>Install <code>pip</code> and <code>virtualenv</code>:</p><div class="highlight"><pre>sudo apt-get install python2.7-dev
+sudo python2 get-pip.py
+sudo pip2 install virtualenv
+</pre><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a><a href="javascript:void(0)" class="code-copy-link zeroclipboard-is-hover"><i class="fa fa-clipboard fa-fw"></i></a></div></li>
+<li><p>Install the Python library dependencies locally:</p><div class="highlight"><pre><span class="nb">cd</span> ~/pebble-dev/pebble-sdk-4.5-linux64
+virtualenv .env
+<span class="nb">source</span> .env/bin/activate
+pip2 install -r requirements.txt
+deactivate
+</pre><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a></div></li>
+</ol>
+
+<blockquote><p><strong>Note: virtualenv is not optional.</strong></p></blockquote>
+<blockquote><p><strong>Note No.2 : The last line in requirements.txt should be changed to "https://github.com/Willow-Systems/vagrant-pebble-sdk/raw/master/pypkjs-1.0.6.tar.gz"</strong></p></blockquote>
+<h2 id="install-pebble-emulator-dependencies" class="anchor">Install Pebble emulator dependencies</h2><p>The Pebble emulator requires some libraries that you may not have installed on
+your system.</p><div class="highlight"><pre>sudo apt-get install libsdl1.2debian libfdt1 libpixman-1-0
+</pre><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a><a href="javascript:void(0)" class="code-copy-link"><i class="fa fa-clipboard fa-fw"></i></a></div><h2 id="next-steps" class="anchor">Next Steps</h2><p>Now that you have the Pebble SDK downloaded and installed on your computer,
+it is time to learn how to write your first app!</p><p>You should checkout the <a href="https://developer.rebble.io/developer.pebble.com/tutorials/index.html" title="" class="">Tutorials</a> for a step-by-step look at how
+to write a simple C Pebble application.</p>
+<h3 id="installation-problems" class="anchor">Installation Problems?</h3><p>If you have any issues with downloading or installing the Pebble SDK, you
+should take a look at the 
+<a href="https://forums.getpebble.com/categories/watchface-sdk-help" title="" class="">SDK Help category</a> on our forums.</p>
+<p>Alternatively, you can <a href="https://developer.rebble.io/developer.pebble.com/contact/index.html" title="" class="">send us a message</a> letting us know what
+issues you're having and we will try and help you out.</p>
+<p>I encountered an error that began with "Traceback (most recent call last):", the solution to this is to create a file called NO_TRACKING in /home/&lt USER &gt/.pebble-sdk/ (It`s a hidden folder)</p>
+      </div>
+    </div>
+    <div class="col-l-4 hidden-s hidden-xs hidden-m" style="">
+      <div class="gray-box gray-box--fixed gray-box--scrollspy" style="position: fixed; height: auto; left: 0px; width: 100px;">
+        
+  <h3>Overview</h3>
+  <ul class="toc">
+    
+      <li class="toc__item toc__item--level1 toc__item--active"><a href="#download-and-install-the-pebble-sdk">Download and install the Pebble SDK</a></li>
+    
+      <li class="toc__item toc__item--level1"><a href="#install-pebble-emulator-dependencies">Install Pebble emulator dependencies</a></li>
+    
+  </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    
+  </div></div>
+  
+  <script type="text/javascript">
+    var searchPrimary = '';
+  </script>
+  
+  <script type="text/javascript" src="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/libs-ce98da7b5eecc97f976a3cad8e665a31.js"></script>
+  
+  <script type="text/javascript" src="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/templates.js"></script>
+  <script type="text/javascript" src="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/app.js"></script>
+  <script type="text/javascript" src="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/search.js"></script>
+  <script type="text/javascript" src="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/quicksearch.js"></script>
+  <script type="text/javascript" src="Installing%20the%20Pebble%20SDK%20on%20Linux%20_%20Pebble%20Developers_files/disqus.js"></script>
+  
+
+
+
+
+
+<div id="mm-blocker" class="mm-slideout"></div></body><!-- Mirrored from developer.pebble.com/sdk/install/linux/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Jun 2018 03:24:10 GMT --></html>
